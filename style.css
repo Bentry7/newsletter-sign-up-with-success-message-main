@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,600;1,500&family=Roboto:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    --Tomato: hsl(4, 100%, 67%);
+    --Dark-Slate-Grey: hsl(234, 29%, 20%);
+    --Charcoal-Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+}
+
+
+body {
+    font-size: 16px;
+    color: var(--Dark-Slate-Grey);
+    font-family: 'Roboto', sans-serif;;
+}
+
+.image {
+    margin-bottom: 25px;
+}
+
+.image img {
+    width: 100%;
+}
+
+.subscribe {
+    margin: 25px;
+}
+
+li {
+    list-style: none;
+    list-style-image: url(./assets/images/icon-list.svg);
+    margin: 20px 30px ;
+}
+
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.email label {
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.email input {
+    width: 100%;
+    margin-bottom: 20px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid var(--Grey);
+}
+
+.email input::placeholder {
+    text-indent: 20px;
+}
+
+button {
+    width: 100%;
+    font-size: 1.1rem;
+    height: 50px;
+    border-radius: 5px;
+    color: var(--White);
+    background-color: var(--Dark-Slate-Grey);
+    border-color: transparent;
+    box-shadow: none;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: var(--Tomato);
+}
+
+#confirm-msg {
+    margin: 20vh 5vh 2vh 5vh;
+}
+
+#confirm-msg p {
+    margin-bottom: 30;
+}
+#confirm-msg button {
+    margin-top: 30vh;
+}
+
+/* media queries  */
+@media (min-width: 576px) {
+    body {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    main {
+        display: flex;
+        font-size: 1.4rem;
+        max-width: 1440px;
+    }
+    .image {
+        order: 2;
+        flex-basis: 48%;
+        margin-top: 10px;
+    }
+
+    .image img {
+        border-radius: 5px;
+        height: 88vh;
+        min-height: 650px;
+
+    }
+    .subscribe {
+        order: 1;
+        flex-basis: 44%;
+        margin: 3%;
+        height: 80%;
+    }
+
+    .subscribe h2 {
+        margin-top: 10vh;
+        font-size: 3rem;
+    }
+
+    button , #email-input {
+    height: 7vh;
+    max-height: 120px;
+    font-size: inherit;
+    }
+
+    .email input::placeholder {
+        font-size: 1.4rem;
+    }
+
+    input:invalid {
+        border: 2px dashed red;
+      }
+
+    ul {
+        margin-bottom: 5vh;
+    }
+
+    /* success desktop styles */
+    #confirm-msg {
+        margin: 10vw;
+        font-size: 2.2rem;
+        max-width: 750px;
+        margin-top: 20px;
+    }
+
+    #confirm-msg h2 {
+        font-size: 2.8em;
+        
+    }
+    #confirm-msg #resetBtn {
+        margin-top: 10vh;
+        height: 100px;
+        font-size: 2.2rem;
+        border-radius: 20px;
+        
+    }
+
+
+
+    
+}
